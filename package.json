@@ -1,0 +1,25 @@
+{
+  "name": "alerter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env index.js",
+    "token": "node --env-file=.env scripts/generate-token.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "email": "node --env-file=.env testemail.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Message alerting service that forwards messages to Telegram and email",
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgun.js": "^12.0.1",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
