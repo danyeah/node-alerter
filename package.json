@@ -7,10 +7,10 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node --env-file=.env index.js",
+    "start": "node index.js",
+    "dev": "node --env-file=.env index.js",
     "token": "node --env-file=.env scripts/generate-token.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "email": "node --env-file=.env testemail.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
