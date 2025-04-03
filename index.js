@@ -3,7 +3,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import Mailgun from 'mailgun.js';
 import FormData from 'form-data';
 import jwt from 'jsonwebtoken';
-import { config } from './config.js';
+import { config } from './config_cimea.js';
 
 const app = express();
 app.use(express.json());
