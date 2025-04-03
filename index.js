@@ -3,7 +3,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import Mailgun from 'mailgun.js';
 import FormData from 'form-data';
 import jwt from 'jsonwebtoken';
-import { config } from './config_cimea.js';
+import { config } from './config.js';
 
 const app = express();
 app.use(express.json());
@@ -117,7 +117,8 @@ app.post(config.endpoint, authenticateJWT, async (req, res) => {
 });
 
 // Start server
-app.listen(config.port, () => {
-  console.log(`Server running on port ${config.port}`);
+const PORT = process.env.PORT || config.port;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
   console.log(`Message endpoint: ${config.endpoint}`);
 }); 
